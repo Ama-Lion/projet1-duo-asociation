@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/home.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -38,11 +39,31 @@
     --------------------->
 
     <!-----------------------
-          MAIN  STARTS HERE
+          SLIDER STARTS HERE
     --------------------->
 
+    <div class="slider">
+      <div class="slide current">
+        <div class="content">
+          <h1>DÉCOUVREZ NOS ÉVÉNEMENTS</h1>
+          <button ><a href="../html/evenements.html">Participer</a></button>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="content">
+          <h1>PARRAINER UN ENFANT PRÈS DE CHEZ VOUS</h1>
+          <button ><a href="../html/je-parraine.html">Participer</a></button>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    <div class="buttons">
+      <button id="prev"><i class="fas fa-arrow-left"></i></button>
+      <button id="next"><i class="fas fa-arrow-right"></i></button>
+    </div>
     <!-----------------------
-          MAIN ENDS HERE
+          SLIDER ENDS HERE
     --------------------->
 
     <!-----------------------
@@ -62,6 +83,7 @@
           FOOTER ENDS HERE
     --------------------->
 
+    <script src="../js/slider.js"></script>
     <script src="../js/nav.js"></script>
   </body>
 </html>
