@@ -25,7 +25,7 @@ nav {
 }
 
 .nav-links li :hover {
-  background-color: #ff18be;
+  background-color: #c452a4;
 }
 
 .nav-links {
@@ -43,13 +43,16 @@ nav {
 }
 
 .nav-links li a {
+  color: white;
   padding: 20px;
   margin: 0px;
-  border-radius: 50px;
-  color: black;
+  border-radius: 10px;
   text-decoration: none;
   font-size: 16px;
-  background-color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 .haburger {
   display: none;
@@ -102,8 +105,8 @@ i {
   .logo img {
     position: absolute;
     width: 100px;
-    height: 80px;
-    left: 80px;
+    height: 70px;
+    left: 60px;
     z-index: 3;
   }
   .line {
@@ -123,9 +126,16 @@ i {
     top: 40px;
     transform: translate(-5%, -50%);
     z-index: 3;
+    -webkit-transform: translate(-5%, -50%);
+    -moz-transform: translate(-5%, -50%);
+    -ms-transform: translate(-5%, -50%);
+    -o-transform: translate(-5%, -50%);
   }
 
   .nav-links {
+    align-items: center;
+    margin: 0px;
+    overflow: hidden;
     position: absolute;
     right: 0;
     background: black;
@@ -136,6 +146,10 @@ i {
     -webkit-clip-path: circle(100px at 90% -10%);
     transition: all 1s ease-out;
     pointer-events: none;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
   }
   .nav-links.open {
     clip-path: circle(1000px at 90% -10%);
@@ -145,11 +159,9 @@ i {
   .landing {
     flex-direction: column;
   }
-  .nav-links li {
-    opacity: 0;
-  }
+
   .nav-links li a {
-    font-size: 25px;
+    font-size: 20px;
   }
   .nav-links li:nth-child(1) {
     transition: all 0.5s ease 0.2s;
@@ -162,6 +174,9 @@ i {
   }
   li.fade {
     opacity: 1;
+  }
+  footer i {
+    font-size: 1.2rem;
   }
   /* -------------------HEADER ENDS HERE -----------*/
 }

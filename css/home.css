@@ -116,8 +116,24 @@ button a {
 }
 
 @media (max-width: 500px) {
+  body {
+    max-height: 100vh;
+  }
+  .buttons button {
+    padding: 0px;
+    border: none;
+  }
+  .buttons button:hover {
+    background: none;
+    color: white;
+  }
+
+  .buttons button i {
+    margin: 10px;
+    font-size: 1rem;
+  }
   .slide .content {
-    bottom: -300px;
+    bottom: -290px;
     left: 0;
     width: 100%;
   }
@@ -126,7 +142,7 @@ button a {
     overflow: hidden;
     height: 80vh;
     width: 100vw;
-    top: 5em;
+    top: 4em;
   }
   .slide.current .content {
     transform: translateY(-300px);
