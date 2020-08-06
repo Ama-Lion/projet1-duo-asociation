@@ -18,10 +18,13 @@ nav {
   justify-content: space-around;
 }
 .logo img {
-  width: 143px;
-  height: 100px;
-  margin-top: px;
+  width: 110px;
+  height: 95px;
+  margin-top: -15px;
   z-index: 40;
+}
+.logo a {
+  margin: 0px;
 }
 
 .nav-links li :hover {
@@ -36,7 +39,7 @@ nav {
   height: 100%;
   justify-content: space-around;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 #active {
   background: #ff18be;
@@ -44,7 +47,7 @@ nav {
 
 .nav-links li a {
   color: white;
-  padding: 20px;
+  padding: 10px;
   margin: 0px;
   border-radius: 10px;
   text-decoration: none;
@@ -108,6 +111,7 @@ i {
     height: 70px;
     left: 60px;
     z-index: 3;
+    top: 12px;
   }
   .line {
     width: 30px;
@@ -175,8 +179,13 @@ i {
   li.fade {
     opacity: 1;
   }
+  footer {
+    width: 100vw;
+  }
   footer i {
-    font-size: 1.2rem;
+    font-size: 2rem;
+    margin: 5px;
+    padding: 0;
   }
   /* -------------------HEADER ENDS HERE -----------*/
 }

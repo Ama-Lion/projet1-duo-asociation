@@ -2,15 +2,20 @@
       DESKTOP
 -------------------- */
 
+/* --------BEGIN MAIN IMAGE--------- */
 img {
   width: 100%;
 }
+
+/* --------BEGIN SECTION TITLE--------- */
 .section-header {
   text-align: center;
   font: 300 50px "Oswald", sans-serif;
   letter-spacing: 6px;
   color: #ff18be;
 }
+
+/* --------BEGIN EVENTS--------- */
 #events {
   display: flex;
   flex-direction: column;
@@ -85,17 +90,18 @@ img {
 /* ------------------ 
       TABLETTE/PHONE
 -------------------- */
-
 @media screen and (max-width: 850px) {
   .section-header {
     font-size: 1.5rem;
   }
   #events {
-    width: 95vw;
+    width: 100%;
   }
   .event {
     display: flex;
     flex-direction: column;
+    width: 97%;
+    margin: 15px;
   }
   .title {
     font-size: 1rem;

@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
 }
-
+/* --------BEGIN BODY--------- */
 body {
   font-family: "Roboto", sans-serif;
   background: #333;
@@ -13,21 +13,28 @@ body {
   line-height: 1.6;
   height: 100vh;
 }
+
+/* --------BEGIN HEADER--------- */
 header {
   z-index: 20;
   position: relative;
 }
+
+/* --------BEGIN FOOTER--------- */
+
 footer {
   position: absolute;
   bottom: 0em;
   width: 100%;
 }
+
+/* --------BEGIN SLIDER--------- */
 .slider {
   position: absolute;
   overflow: hidden;
-  height: 80vh;
+  height: 90vh;
   width: 100vw;
-  top: 5em;
+  top: 2em;
 }
 
 .slide {
@@ -115,9 +122,12 @@ button a {
   color: #333;
 }
 
+/* --------BEGIN MEDIA QUERIES--------- */
+
 @media (max-width: 500px) {
   body {
-    max-height: 100vh;
+    max-height: 10vh;
+    min-height: 100vh;
   }
   .buttons button {
     padding: 0px;
@@ -133,20 +143,25 @@ button a {
     font-size: 1rem;
   }
   .slide .content {
-    bottom: -290px;
+    bottom: -230px;
     left: 0;
     width: 100%;
   }
   .slider {
     position: absolute;
     overflow: hidden;
-    height: 80vh;
+    height: 90vh;
     width: 100vw;
-    top: 4em;
+    top: 5px;
   }
   .slide.current .content {
     transform: translateY(-300px);
+    -webkit-transform: translateY(-300px);
+    -moz-transform: translateY(-300px);
+    -ms-transform: translateY(-300px);
+    -o-transform: translateY(-300px);
   }
+  
 }
 
 /* Backgorund Images */
