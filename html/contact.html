@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <title>F-Parrainage</title>
+  </head>
+  <body>
+    <!-----------------------
+          HEADER STARTS HERE
+    --------------------->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../img/Logo parrainagefinal.png" alt="logo" />
+          </a>
+        </div>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="./je-parraine.html">Je parraine Un Enfant</a></li>
+          <li><a id="active" href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-----------------------
+          HEADER ENDS HERE
+    --------------------->
+
+    <!-----------------------
+          MAIN  STARTS HERE
+    --------------------->
+    <img src="../img/kid-contact.jpg" alt="" />
+    <main id="contact">
+      <h1 class="section-header">CONTACT</h1>
+
+      <div class="contact-wrapper">
+        <!---------------- 
+      
+            CONTACT PAGE LEFT 
+          
+            ----------------->
+
+        <form class="form-horizontal">
+          <div class="form-group">
+            <div>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="NAME"
+                name="name"
+                value=""
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="EMAIL"
+                name="email"
+                value=""
+              />
+            </div>
+          </div>
+
+          <textarea
+            class="form-control"
+            rows="10"
+            placeholder="MESSAGE"
+            name="message"
+          ></textarea>
+
+          <button class="send-button" id="submit" type="submit" value="SEND">
+            <div class="button">
+              <i class="fa fa-paper-plane"></i
+              ><span class="send-text">SEND</span>
+            </div>
+          </button>
+        </form>
+
+        <!---------------- 
+      
+            CONTACT PAGE RIGHT 
+          
+            ----------------->
+
+        <div class="direct-contact-container">
+          <ul class="contact-list">
+            <li class="list-item">
+              <i class="fa fa-map-marker fa-2x"
+                ><span class="contact-text place">Paris | FR</span></i
+              >
+            </li>
+
+            <li class="list-item">
+              <i class="fa fa-phone fa-2x"
+                ><span class="contact-text phone"
+                  ><a href="tel:1-212-555-5555" title="Give me a call"
+                    >00-938-938-930</a
+                  ></span
+                ></i
+              >
+            </li>
+
+            <li class="list-item">
+              <i class="fa fa-envelope fa-2x"
+                ><span class="contact-text gmail"
+                  ><a href="mailto:#" title="Send me an email"
+                    >Pa@gmail.com</a
+                  ></span
+                ></i
+              >
+            </li>
+          </ul>
+
+          <hr />
+        </div>
+      </div>
+    </main>
+
+    <!-----------------------
+          MAIN ENDS HERE
+    --------------------->
+
+    <!-----------------------
+          FOOTER STARTS HERE
+    --------------------->
+    <footer>
+      <div class="apropos">
+        <a href="./a-propos.html">A Propos</a>
+      </div>
+      <nav class="footer-nav">
+        <li><i class="fab fa-instagram"></i></li>
+        <li><i class="fab fa-youtube"></i></li>
+        <li><i class="fab fa-facebook-square"></i></li>
+      </nav>
+    </footer>
+    <!-----------------------
+          FOOTER ENDS HERE
+    --------------------->
+
+    <script src="../js/nav.js"></script>
+  </body>
+</html>

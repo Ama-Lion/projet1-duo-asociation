@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/home.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
-    <title>F-Parrainage</title>
+    <title>Accueil</title>
   </head>
   <body>
     <!-----------------------
@@ -19,7 +20,7 @@
     <header>
       <nav>
         <div class="logo">
-          <a href="../index.html">
+          <a href="./index.html">
             <img src="../img/Logo parrainagefinal.png" alt="logo" />
           </a>
         </div>
@@ -29,9 +30,9 @@
           <div class="line"></div>
         </div>
         <ul class="nav-links">
-          <li><a href="../index.html">Accueil</a></li>
-          <li><a href="./je-parraine.html">Je parraine Un Enfant</a></li>
-          <li><a href="./contact.html">Contact</a></li>
+          <li><a id="active" href="./index.html">Accueil</a></li>
+          <li><a href="./html/je-parraine.html">Je parraine Un Enfant</a></li>
+          <li><a href="./html/contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -40,11 +41,31 @@
     --------------------->
 
     <!-----------------------
-          MAIN  STARTS HERE
+          SLIDER STARTS HERE
     --------------------->
 
+    <div class="slider">
+      <div class="slide current">
+        <div class="content">
+          <h1>DÉCOUVREZ NOS ÉVÉNEMENTS</h1>
+          <button ><a href="./html/evenements.html">Participer</a></button>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="content">
+          <h1>PARRAINER UN ENFANT PRÈS DE CHEZ VOUS</h1>
+          <button ><a href="./html/je-parraine.html">Je Parraine</a></button>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    <div class="buttons">
+      <button id="prev"><i class="fas fa-arrow-left"></i></button>
+      <button id="next"><i class="fas fa-arrow-right"></i></button>
+    </div>
     <!-----------------------
-          MAIN ENDS HERE
+          SLIDER ENDS HERE
     --------------------->
 
     <!-----------------------
@@ -52,7 +73,7 @@
     --------------------->
     <footer>
       <div class="apropos">
-        <a href="./a-propos.html">A Propos</a>
+        <a href="./html/a-propos.html">A Propos</a>
       </div>
       <nav class="footer-nav">
         <li><i class="fab fa-instagram"></i></li>
@@ -64,6 +85,7 @@
           FOOTER ENDS HERE
     --------------------->
 
+    <script src="../js/slider.js"></script>
     <script src="../js/nav.js"></script>
   </body>
 </html>
