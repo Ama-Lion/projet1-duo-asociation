@@ -1,10 +1,15 @@
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
+const scrolToTop = document.querySelector("#scrolTOTop");
 
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("open");
   links.forEach((link) => {
     link.classList.toggle("fade");
   });
+});
+
+scrolToTop.addEventListener("click", function () {
+  window.scrollTo(0, 0);
 });
