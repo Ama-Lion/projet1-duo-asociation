@@ -241,4 +241,7 @@ i {
   #logo {
     margin-left: 10px;
   }
+  #scrolTOTop {
+    display: block;
+  }
 }
