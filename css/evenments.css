@@ -86,7 +86,9 @@ img {
   width: 80%;
   margin: auto;
 }
-
+header ul {
+  margin: 0px;
+}
 /* ------------------ 
       TABLETTE/PHONE
 -------------------- */

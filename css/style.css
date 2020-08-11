@@ -4,63 +4,166 @@ body {
   box-sizing: border-box;
 }
 
+/* -------------------
+VERSION MOBILE 
+----------*/
+@media screen and (max-width: 842px) {
+  /* MOBILE HEADER */
+  .burger {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    right: 10px;
+  }
+  .burger span {
+    padding: 0.2rem 2rem;
+    background: white;
+    margin: 0.5rem 0rem;
+    display: block;
+    transition: all 0.5s ease;
+    z-index: 3;
+  }
+  .nav-links a {
+    z-index: 3;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 1s ease;
+  }
+  .menu-check {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(5%, -50%);
+    -webkit-transform: translate(5%, -50%);
+    -moz-transform: translate(5%, -50%);
+    -ms-transform: translate(5%, -50%);
+    -o-transform: translate(5%, -50%);
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    opacity: 0;
+    display: block;
+    z-index: 60;
+  }
+  .menu-check:checked + .nav-links {
+    transform: translate(-100%);
+    -webkit-transform: translate(-100%);
+    -moz-transform: translate(-100%);
+    -ms-transform: translate(-100%);
+    -o-transform: translate(-100%);
+  }
+  .menu-check:checked ~ .burger span:nth-child(1) {
+    transform: rotateZ(45deg) translateY(300%);
+    background: white;
+    -webkit-transform: rotateZ(45deg) translateY(300%);
+    -moz-transform: rotateZ(45deg) translateY(300%);
+    -ms-transform: rotateZ(45deg) translateY(300%);
+    -o-transform: rotateZ(45deg) translateY(300%);
+  }
+  .menu-check:checked ~ .burger span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-check:checked ~ .burger span:nth-child(3) {
+    transform: rotateZ(-45deg) translateY(-300%);
+    background: white;
+    -webkit-transform: rotateZ(-45deg) translateY(-300%);
+    -moz-transform: rotateZ(-45deg) translateY(-300%);
+    -ms-transform: rotateZ(-45deg) translateY(-300%);
+    -o-transform: rotateZ(-45deg) translateY(-300%);
+  }
+
+  /* MOBILE FOOTER */
+  footer {
+    width: 100vw;
+  }
+  footer i {
+    font-size: 2rem;
+    margin: 15px;
+    padding: 0;
+  }
+}
+
+/* -------------------
+VERSION DESKTOP
+----------*/
+
 /* -------------------HEADER STARTS HERE -----------*/
-header {
-  height: 10vh;
-  background-color: rgb(0, 0, 0);
-  width: 100%;
-  position: sticky;
-  top: 0px;
+
+.menu-check {
+  display: none;
   z-index: 30;
 }
-nav {
-  display: flex;
-  justify-content: space-around;
+ul {
+  list-style: none;
 }
-.logo img {
-  width: 110px;
-  height: 95px;
-  margin-top: -15px;
+a {
+  text-decoration: none;
+  color: white;
+}
+.main-head {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  position: relative;
+  background-color: black;
+  height: 10vh;
+  background-color: #000000;
+  width: 100%;
+}
+
+header nav {
+  position: fixed;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
+#logo {
+  z-index: 4;
+  flex: 0rem;
+  margin-left: 80px;
+}
+#logo img {
+  width: 100px;
+  height: 90px;
   z-index: 40;
 }
-.logo a {
-  margin: 0px;
-}
-
-.nav-links li :hover {
-  background-color: #c452a4;
-}
-
 .nav-links {
-  color: black;
   display: flex;
-  list-style: none;
-  width: 50%;
-  height: 100%;
   justify-content: space-around;
-  align-items: center;
-  margin-top: 20px;
-}
-#active {
-  background: #ff18be;
+  flex: 1 1 20rem;
 }
 
-.nav-links li a {
-  color: white;
-  padding: 10px;
-  margin: 0px;
+.nav-links li:hover {
+  background-color: #ff18be;
   border-radius: 10px;
-  text-decoration: none;
-  font-size: 16px;
+}
+.nav-links li .active {
+  background-color: #ff18be;
+  padding: 10px;
+  border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-.haburger {
-  display: none;
+.nav-links li {
+  padding: 10px;
+  border-right: 2px solid #ff18be;
+  border-left: 2px solid #ff18be;
 }
-
 /* -------------------HEADER ENDS HERE -----------*/
 
 /* -------------------FOOTER STARTS HERE -----------*/
@@ -100,7 +203,7 @@ i {
   width: 100%;
 }
 #scrolTOTop {
-  z-index: 100;
+  z-index: 1;
   position: fixed;
   right: 30px;
   bottom: 80px;
@@ -127,94 +230,15 @@ i {
 }
 /* -------------------FOOTER ENDS HERE -----------*/
 
-/* -------------------VERSION MOBILE -----------*/
-
-/* -------------------HEADER STARTS HERE -----------*/
-@media screen and (max-width: 850px) {
-  .logo img {
-    position: absolute;
-    width: 100px;
-    height: 70px;
-    left: 60px;
-    z-index: 3;
-    top: 12px;
-  }
-  .line {
-    width: 30px;
-    height: 3px;
-    background: white;
-    margin: 5px;
-  }
-  nav {
-    position: relative;
-  }
-
-  .hamburger {
-    position: absolute;
-    cursor: pointer;
-    right: 5%;
-    top: 40px;
-    transform: translate(-5%, -50%);
-    z-index: 3;
-    -webkit-transform: translate(-5%, -50%);
-    -moz-transform: translate(-5%, -50%);
-    -ms-transform: translate(-5%, -50%);
-    -o-transform: translate(-5%, -50%);
-  }
-
-  .nav-links {
-    align-items: center;
-    margin: 0px;
-    overflow: hidden;
-    position: absolute;
-    right: 0;
-    background: black;
-    height: 100vh;
-    width: 100%;
-    flex-direction: column;
-    clip-path: circle(100px at 90% -10%);
-    -webkit-clip-path: circle(100px at 90% -10%);
-    transition: all 1s ease-out;
-    pointer-events: none;
-    -webkit-transition: all 1s ease-out;
-    -moz-transition: all 1s ease-out;
-    -ms-transition: all 1s ease-out;
-    -o-transition: all 1s ease-out;
-  }
-  .nav-links.open {
-    clip-path: circle(1000px at 90% -10%);
-    -webkit-clip-path: circle(10000px at 90% -10%);
-    pointer-events: all;
-  }
-  .landing {
-    flex-direction: column;
-  }
-
-  .nav-links li a {
-    font-size: 20px;
-  }
-  .nav-links li:nth-child(1) {
-    transition: all 0.5s ease 0.2s;
-  }
-  .nav-links li:nth-child(2) {
-    transition: all 0.5s ease 0.4s;
-  }
-  .nav-links li:nth-child(3) {
-    transition: all 0.5s ease 0.6s;
-  }
-  li.fade {
-    opacity: 1;
-  }
-  footer {
-    width: 100vw;
-  }
-  footer i {
-    font-size: 2rem;
-    margin: 5px;
-    padding: 0;
-  }
-  #scrolTOTop {
+/* ----LITTLE AJUSTMENT--- */
+@media screen and (max-width: 842px) {
+  .menu-check {
     display: block;
   }
-  /* -------------------HEADER ENDS HERE -----------*/
+  .section-header {
+    font-size: 1rem;
+  }
+  #logo {
+    margin-left: 10px;
+  }
 }

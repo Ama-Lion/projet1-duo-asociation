@@ -1,10 +1,62 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+/* --------MOBILE VERSION--------- */
+
+@media (max-width: 500px) {
+  body {
+    max-height: 10vh;
+    min-height: 100vh;
+  }
+  .buttons button {
+    padding: 0px;
+    border: none;
+  }
+  .buttons button:hover {
+    background: none;
+    color: white;
+  }
+
+  .buttons button i {
+    margin: 10px;
+    font-size: 1rem;
+  }
+  .slide .content {
+    bottom: -270px;
+    left: 0;
+    width: 100%;
+  }
+  .slider {
+    position: absolute;
+    overflow: hidden;
+    height: 90vh;
+    width: 100vw;
+    top: 5px;
+  }
+  .slide.current .content {
+    transform: translateY(-300px);
+    -webkit-transform: translateY(-300px);
+    -moz-transform: translateY(-300px);
+    -ms-transform: translateY(-300px);
+    -o-transform: translateY(-300px);
+  }
+}
+
+/* Backgorund Images */
+
+.slide:first-child {
+  background: url("../img/slide1edit.png") no-repeat center top/cover;
+}
+.slide:nth-child(2) {
+  background: url("../img/slide2.jpg") no-repeat center top/cover;
+}
+
+/* --------DESKTOP VERSION--------- */
+
 /* --------BEGIN BODY--------- */
 body {
   font-family: "Roboto", sans-serif;
@@ -14,13 +66,7 @@ body {
   height: 100vh;
 }
 
-/* --------BEGIN HEADER--------- */
-header {
-  z-index: 20;
-  position: relative;
-}
-
-/* --------BEGIN FOOTER--------- */
+/* --------FOOTER--------- */
 
 footer {
   position: absolute;
@@ -28,7 +74,7 @@ footer {
   width: 100%;
 }
 
-/* --------BEGIN SLIDER--------- */
+/* --------SLIDER--------- */
 .slider {
   position: absolute;
   overflow: hidden;
@@ -89,7 +135,7 @@ button a {
 }
 
 .slide.current .content {
-  z-index: 7;
+  z-index: 1;
   opacity: 1;
   transform: translateX(600px);
   transition: all 0.7s ease-in-out 0.3s;
@@ -120,55 +166,4 @@ button a {
 .buttons button:hover {
   background-color: #fff;
   color: #333;
-}
-
-/* --------BEGIN MEDIA QUERIES--------- */
-
-@media (max-width: 500px) {
-  body {
-    max-height: 10vh;
-    min-height: 100vh;
-  }
-  .buttons button {
-    padding: 0px;
-    border: none;
-  }
-  .buttons button:hover {
-    background: none;
-    color: white;
-  }
-
-  .buttons button i {
-    margin: 10px;
-    font-size: 1rem;
-  }
-  .slide .content {
-    bottom: -230px;
-    left: 0;
-    width: 100%;
-  }
-  .slider {
-    position: absolute;
-    overflow: hidden;
-    height: 90vh;
-    width: 100vw;
-    top: 5px;
-  }
-  .slide.current .content {
-    transform: translateY(-300px);
-    -webkit-transform: translateY(-300px);
-    -moz-transform: translateY(-300px);
-    -ms-transform: translateY(-300px);
-    -o-transform: translateY(-300px);
-  }
-  
-}
-
-/* Backgorund Images */
-
-.slide:first-child {
-  background: url("../img/slide1edit.png") no-repeat center top/cover;
-}
-.slide:nth-child(2) {
-  background: url("../img/slide2.jpg") no-repeat center top/cover;
 }
